@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-       Loki's React APPs
+       Loki's React APP
       </header>
     </div>
   );
