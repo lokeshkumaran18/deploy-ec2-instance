@@ -18,7 +18,7 @@ jobs:
       - name: Publish image to docker hub
         run: docker push lokeshkumaran29/reactjs-app:latest   
 
- deploy: 
+  deploy: 
     needs: build
     runs-on: ip-172-31-7-112
     steps:
