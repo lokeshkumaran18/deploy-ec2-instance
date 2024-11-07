@@ -3,7 +3,7 @@ name: CICD
 on:
   push:
     branches:
-      - deploy-to-ec2
+      - deploy-ec2-instance
 
 jobs:
   build:
@@ -18,9 +18,9 @@ jobs:
       - name: Publish image to docker hub
         run: docker push lokeshkumaran29/reactjs-app:latest   
 
-  deploy: 
+ deploy: 
     needs: build
-    runs-on: aws-ec2    
+    runs-on: ip-172-31-7-112
     steps:
       - name: Pull image from docker hub
         run: docker pull lokeshkumaran29/reactjs-app:latest 
